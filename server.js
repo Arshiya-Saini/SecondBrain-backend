@@ -12,7 +12,10 @@ dotenv.config();
 const app = express();
 
 // ✅ VERY IMPORTANT
-app.use(cors());
+app.use(cors({
+  origin: "*",
+  credentials: true
+}));
 
 // Middleware
 app.use(express.json());
